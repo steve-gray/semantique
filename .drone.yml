@@ -1,0 +1,18 @@
+pipeline:
+    install_npm_packages:
+        image: node:4
+        commands:
+            - npm install
+            - npm test
+
+    dogfood_versioning:
+        image: node:4
+            - npm start
+            - git config --user.name steve-gray
+            - git config --user.email steve@eventualconsistency.net
+            - git push origin
+        when:
+            branch: master
+            event: push
+
+    
