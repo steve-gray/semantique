@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "Automated semantic versioning.",
   "main": "lib",
+  "bin": "./lib",
   "scripts": {
+    "start": "node lib",
     "test": "ls"
   },
   "repository": {
