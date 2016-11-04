@@ -1,0 +1,9 @@
+# Docker Content
+content
+
+.DS_Store
+thumbs.db
+*.bak
+*.log
+*.tmp
+node_modules

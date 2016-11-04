@@ -7,8 +7,15 @@ pipeline:
             - npm install
             - npm test
 
+    docker_publishing:
+        image: plugins/docker
+        repo: eventualconsistency/semantique
+        tag: onbuild
+        when:
+            event: push
+
     dogfood_versioning:
-        image: node:4
+        image: eventualconsistency/semantique:onbuild
         commands:
             - git config --global user.name steve-gray
             - git config --global user.email steve@eventualconsistency.net
