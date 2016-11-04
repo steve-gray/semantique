@@ -20,7 +20,7 @@ pipeline:
     git_push:
         image: plugins/git-push
         remote: https://github.com/steve-gray/semantique.git
-        remote_name: origin
+        remote_name: github
         when:
             branch: master
             event: push
