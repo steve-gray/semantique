@@ -20,7 +20,7 @@ pipeline:
     push_back_to_git:
         image: plugins/git-push
         branch: master
-        remote: git@github.com:steve-gray/semantique.git
+        remote: ssh://git@github.com:steve-gray/semantique.git
         when:
             branch: master
             event: push
