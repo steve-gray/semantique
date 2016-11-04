@@ -12,6 +12,7 @@ pipeline:
         repo: eventualconsistency/semantique
         tag: onbuild
         when:
+            branch: master
             event: push
 
     dogfood_versioning:
@@ -24,10 +25,10 @@ pipeline:
             branch: master
             event: push
 
-    push_back_to_git:
-        image: plugins/git-push
-        branch: master
-        remote: ssh://git@github.com:steve-gray/semantique.git
+    docker_publishing:
+        image: plugins/docker
+        repo: eventualconsistency/semantique
+        tag: latest
         when:
             branch: master
             event: push
