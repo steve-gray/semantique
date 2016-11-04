@@ -13,13 +13,7 @@ pipeline:
             - git config --global user.name steve-gray
             - git config --global user.email steve@eventualconsistency.net
             - npm start
-            - git push remote origin
-        when:
-            branch: master
-            event: push
-        
-    git_push:
-        image: plugins/git-push
+            - git push --set-upstream origin master
         when:
             branch: master
             event: push
