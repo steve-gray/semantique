@@ -19,8 +19,8 @@
     },
     "defaultVersion": "1.0.0",
     "commitMessage": "[CI SKIP] Updated to version %s for release.",
-    "requireCleanWorkspace": false,
-    "applyNpmVersion": false,
+    "requireCleanWorkspace": true,
+    "applyNpmVersion": true,
     "outputBreak":  "===========================================================================================",
     "defaultType": {
         "type": "none",
