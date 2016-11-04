@@ -11,8 +11,8 @@ pipeline:
         image: node:4
         commands:
             - npm start
-            - git config --add user.name steve-gray
-            - git config --add user.email steve@eventualconsistency.net
+            - git config --global user.name steve-gray
+            - git config --global user.email steve@eventualconsistency.net
             - git push --set-upstream origin master
         when:
             branch: master
