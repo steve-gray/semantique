@@ -9,6 +9,7 @@ pipeline:
 
     dogfood_versioning:
         image: node:4
+        commands:
             - npm start
             - git config --user.name steve-gray
             - git config --user.email steve@eventualconsistency.net
