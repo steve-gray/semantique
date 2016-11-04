@@ -1,6 +1,8 @@
 pipeline:
     install_npm_packages:
         image: node:4
+        environment:
+            - NPM_CONFIG_LOGLEVEL=warn
         commands:
             - npm install
             - npm test
