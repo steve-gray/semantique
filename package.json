@@ -1,0 +1,30 @@
+{
+  "name": "semantique",
+  "version": "0.1.0",
+  "description": "Automated semantic versioning.",
+  "main": "lib",
+  "scripts": {
+    "test": "ls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steve-gray/semantique.git"
+  },
+  "keywords": [
+    "semver",
+    "semantic",
+    "versioning",
+    "automatic"
+  ],
+  "author": "Steve Gray",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/steve-gray/semantique/issues"
+  },
+  "homepage": "https://github.com/steve-gray/semantique#readme",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "defaults-deep": "^0.2.3",
+    "semver": "^5.3.0"
+  }
+}
