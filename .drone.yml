@@ -10,9 +10,9 @@ pipeline:
     dogfood_versioning:
         image: node:4
         commands:
-            - npm start
             - git config --global user.name steve-gray
             - git config --global user.email steve@eventualconsistency.net
+            - npm start
             - git push --set-upstream origin master
         when:
             branch: master
