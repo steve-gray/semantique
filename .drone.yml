@@ -13,7 +13,14 @@ pipeline:
             - git config --global user.name steve-gray
             - git config --global user.email steve@eventualconsistency.net
             - npm start
-            - git push --set-upstream origin master
+        when:
+            branch: master
+            event: push
+
+    push_back_to_git:
+        image: plugins/git-push
+        branch: master
+        remote: git@github.com:steve-gray/semantique.git
         when:
             branch: master
             event: push
