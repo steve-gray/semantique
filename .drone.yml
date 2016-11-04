@@ -10,7 +10,7 @@ pipeline:
             - npm start
             - git config --user.name steve-gray
             - git config --user.email steve@eventualconsistency.net
-            - git push origin
+            - git push
         when:
             branch: master
             event: push
