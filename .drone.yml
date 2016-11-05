@@ -1,4 +1,5 @@
 pipeline:
+    # Preamble to make sure project is ready.
     install_npm_packages:
         image: node:4
         environment:
@@ -8,31 +9,29 @@ pipeline:
             - npm test
 
     # Publish the test plugin.
-    docker_publishing:
+    docker_publish_smoke:
         image: plugins/docker
         repo: eventualconsistency/semantique
-        tag: onbuild
+        tag: smoke
         when:
             branch: master
             event: push
 
-    # Apply our own versioning.
-    dogfood_versioning:
-        image: eventualconsistency/semantique:onbuild
+    # Use the smoke version to apply our own versioning rules.
+    run_semantique_self:
+        image: eventualconsistency/semantique:smoke
         pull: true
-        commands:
-            - git config --global user.name steve-gray
-            - git config --global user.email steve@eventualconsistency.net
-            - npm start
-            - git push origin master
         when:
             branch: master
             event: push
-    
-    docker_publishing:
+
+    # Push the latest and onbuild version tags.
+    docker_publish_release:
         image: plugins/docker
         repo: eventualconsistency/semantique
-        tag: latest
+        tag:
+            - latest
+            - onbuild
         when:
             branch: master
             event: push
