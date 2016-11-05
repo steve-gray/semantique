@@ -15,12 +15,14 @@
         "log": "git log --date=iso --pretty=format:\"%H ||| %an ||| %s ||| %D\"",
         "logDelimiter": "|||",
         "outputTerminator": "\n",
-        "pending": "git diff --name-only"
+        "pending": "git diff --name-only",
+        "push": "git push origin master --tags"
     },
     "defaultVersion": "1.0.0",
     "commitMessage": "[CI SKIP] Updated to version %s for release.",
     "requireCleanWorkspace": true,
     "applyNpmVersion": true,
+    "pushUpstream": true,
     "outputBreak":  "===========================================================================================",
     "defaultType": {
         "type": "none",
