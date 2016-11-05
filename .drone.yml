@@ -19,6 +19,7 @@ pipeline:
     # Apply our own versioning.
     dogfood_versioning:
         image: eventualconsistency/semantique:onbuild
+        pull: true
         commands:
             - git config --global user.name steve-gray
             - git config --global user.email steve@eventualconsistency.net
