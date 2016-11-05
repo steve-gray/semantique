@@ -9,4 +9,4 @@ ADD         package.json    /app
 RUN         npm install git-credential-env
 RUN         git config --global credential.helper "$PWD/node_modules/.bin/git-credential-env --username=GIT_USER --password=GIT_PASS"
 
-ENTRYPOINT  ["node", "index"]
+CMD  ["node", "index"]
