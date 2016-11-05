@@ -23,7 +23,6 @@ pipeline:
         commands:
             - git config --global user.name steve-gray
             - git config --global user.email steve@eventualconsistency.net
-            - env
             - npm start
             - git push origin master
         when:
