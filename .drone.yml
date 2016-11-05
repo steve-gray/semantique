@@ -7,6 +7,7 @@ pipeline:
             - npm install
             - npm test
 
+    # Publish the test plugin.
     docker_publishing:
         image: plugins/docker
         repo: eventualconsistency/semantique
@@ -15,17 +16,19 @@ pipeline:
             branch: master
             event: push
 
+    # Apply our own versioning.
     dogfood_versioning:
         image: eventualconsistency/semantique:onbuild
         commands:
             - git config --global user.name steve-gray
             - git config --global user.email steve@eventualconsistency.net
+            - env
             - npm start
             - git push origin master
         when:
             branch: master
             event: push
-
+    
     docker_publishing:
         image: plugins/docker
         repo: eventualconsistency/semantique
