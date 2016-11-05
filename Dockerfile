@@ -3,7 +3,7 @@ MAINTAINER  steve@eventualconsistency.net
 
 WORKDIR     /plugin
 
-ADD         node_modules    /plugin/
+ADD         node_modules    /plugin/node_modules
 ADD         lib             /plugin/lib/
 ADD         package.json    /plugin
 RUN         npm install git-credential-env
