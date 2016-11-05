@@ -15,6 +15,7 @@ semver like directives to indicate the nature of the change.
 The following prefixes are recognised by default:
 
 | Prefixes | Semver Meaning | Notes | Examples |
+| -------- | -------------- | ----- | -------- |
 | break | Major | When a breaking change has occured. | <ul><li>break(module): No longer default X to Y</li><li>Breaks all of the stuff.</li></ul> |
 | feat | Minor | A new feature or widening change to an operational contract/API. | <ul><li>feat(something): Added widget frobber.</li><li>Feature: Something else.</li></ul> | 
 | patch / bugfix / fix | Patch | A fix to correct a deviation from specified behaviours. | <ul><li>fix(something): Shouldn't do that.</li><li>PATCH: Urgently prevent disaster.</li></ul> |
