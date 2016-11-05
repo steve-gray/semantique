@@ -12,6 +12,7 @@
         "error": -1
     },
     "commands": {
+        "fetchTags": "git fetch --tags",
         "log": "git log --date=iso --pretty=format:\"%H ||| %an ||| %s ||| %d\"",
         "logDelimiter": "|||",
         "outputTerminator": "\n",
