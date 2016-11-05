@@ -1,7 +1,7 @@
 # semantique
-
-Semantic versioning without dependencies on CI systems or using the official NPM registry. Determines the versioning
-of a project based on the current commits in the workspace.
+#### Semver, the old fashioned way
+Semantic versioning based purely on current Git workspace without dependencies on
+CI systems (though you can integrate one if you want).
 
 | Latest Build |
 | ------------- |
