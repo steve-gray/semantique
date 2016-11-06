@@ -26,6 +26,12 @@ pipeline:
             event: push
 
     # Push the latest and onbuild version tags.
+    npm_publish:
+        image: plugins/npm
+        when:
+            event: tag
+
+    # Push the latest and onbuild version tags.
     docker_publish_release:
         image: plugins/docker
         repo: eventualconsistency/semantique
@@ -33,5 +39,4 @@ pipeline:
             - latest
             - onbuild
         when:
-            branch: master
-            event: push
+            event: tag
