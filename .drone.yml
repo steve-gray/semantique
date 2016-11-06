@@ -38,5 +38,6 @@ pipeline:
         tag:
             - latest
             - onbuild
+            - ${DRONE_TAG}
         when:
             event: tag
