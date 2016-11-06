@@ -1,11 +1,11 @@
 # semantique
 #### Semver, the old fashioned way
 Semantic versioning based purely on current Git workspace without dependencies on
-CI systems (though you can integrate one if you want).
+package registries or CI systems (though you can integrate one if you want).
 
-| Latest Build |
-| ------------- |
-| [![Build Status](http://drone.eventualconsistency.net/api/badges/steve-gray/semantique/status.svg)](http://drone.eventualconsistency.net/steve-gray/semantique) |
+| Current Version | Latest Build | Dependencies | Dev Dependencies |
+| --------------- | ------------ | ----------- | ---------------- |
+| [![npm version](https://badge.fury.io/js/semantique.svg)](https://badge.fury.io/js/semantique) | [![Build Status](http://drone.eventualconsistency.net/api/badges/steve-gray/semantique/status.svg)](http://drone.eventualconsistency.net/steve-gray/semantique) | [![Prod Dependencies](https://david-dm.org/steve-gray/semantique/status.svg)](https://david-dm.org/steve-gray/semantique) | [![Dev Dependencies](https://david-dm.org/steve-gray/semantique/dev-status.svg)](https://david-dm.org/steve-gray/semantique#info=devDependencies) |
 
 ## How It Works
 The _semantique_ package checks the current working directory to determine any
@@ -51,7 +51,7 @@ be used with your pipeline such as:
                     branch: master
                     event: push
 
-You need to set the following environment variables (as secrets in Drone/GoCD):
+It is assumed that the upstream origin URL is already set on your git workspace for the purposes of publishing. You need to set the following environment variables (as secrets in Drone/GoCD):
 
 | Environment Variable | Used For |
 | - | - |
