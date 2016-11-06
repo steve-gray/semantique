@@ -1,6 +1,6 @@
 {
   "name": "semantique",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Automated semantic versioning.",
   "main": "lib",
   "bin": "./lib",
