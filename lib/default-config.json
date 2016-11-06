@@ -20,7 +20,7 @@
         "push": "git push origin master --tags"
     },
     "defaultVersion": "1.0.0",
-    "commitMessage": "[CI SKIP] Updated to version %s for release.",
+    "commitMessage": "Updated to version %s for release.",
     "requireCleanWorkspace": true,
     "applyNpmVersion": true,
     "pushUpstream": true,
