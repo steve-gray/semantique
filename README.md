@@ -7,6 +7,7 @@ package registries or CI systems (though you can integrate one if you want).
 | --------------- | ------------ | ----------- | ---------------- |
 | [![npm version](https://badge.fury.io/js/semantique.svg)](https://badge.fury.io/js/semantique) | [![Build Status](http://drone.eventualconsistency.net/api/badges/steve-gray/semantique/status.svg)](http://drone.eventualconsistency.net/steve-gray/semantique) | [![Prod Dependencies](https://david-dm.org/steve-gray/semantique/status.svg)](https://david-dm.org/steve-gray/semantique) | [![Dev Dependencies](https://david-dm.org/steve-gray/semantique/dev-status.svg)](https://david-dm.org/steve-gray/semantique#info=devDependencies) |
 
+
 ## How It Works
 The _semantique_ package checks the current working directory to determine any
 changes that have been made since the last tag on the branch. Commits use
@@ -31,6 +32,10 @@ In short:
 
 The package will then read the commits and tags, determine the
 next tag (defaulting to 1.0.0 for the first hit)
+
+## Example Projects
+I've switched many of my own packages to use _semantique_, such as my IOC module, [somersault](https://github.com/steve-gray/somersault).
+The .drone.yml for that project represents what I'd consider best practices for using this module.
 
 ## Running with CI Systems (Drone, GoCD)
 To run with a CI system, I publish a convienient docker image. This image can 
@@ -74,6 +79,14 @@ _semantique_:
 | SQ\_OPT_CHECKCLEAN | true | Check if the workspace is clean. Set to 0/false to allow dirty workspaces. |
 | SQ\_OPT_APPLYVERSION | true | Apply the versioning command to the package type. Set to 0/false to skip the version bump command |
 | SQ\_OPT_PUSH | true | Push to upstream repository after success? |
+
+## Security and other Considerations
+Be sure to:
+
+  - Configure the GIT_USER / GIT_PASS secrets only for push operations for the semantique image.
+  - Make sure semantique only runs on the main release branch for your project (branch: master in Drone or similiar), otherwise commits to other branches will trigger competing releases.
+  - Due to the lack of a conditional publish operation in Drone, I typically configure the pipelines in my examples such that pushing the tag back is what triggers the actual NPM release on a second build run.
+  - If you're using this in anger I'd recommend specifying a particular version of the image for Docker - rather than defaulting to latest. I'll never rewrite a version tag, but latest/smoke/onbuild will be subject to dramatic breaking changes.
 
 ## Contributing
 Feature suggestions and improvements welcome. Early days.
