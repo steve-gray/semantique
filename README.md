@@ -58,4 +58,22 @@ You need to set the following environment variables (as secrets in Drone/GoCD):
 | GIT_USER | Username for publishing changes back to the upstream Git repository. |
 | GIT_PASS | Password or personal access token (recommended) for publishing changes back to upstream. |
 
+The following environment variables are used to configure other aspects of the behaviour of
+_semantique_:
 
+| Environment Variable | Default | Notes |
+| -------------------- | ------- | ----- |
+| SQ\_CMD_FETCH | git fetch --tags | The command to fetch the tags for the current repo. Runs before processing. |
+| SQ\_CMD_LOGS | git log --date=iso --pretty=format:\"%H \|\|\| %an \|\|\| %s \|\|\| %d\" | Command to extract the logs from SCM for parsing. |
+| SQ\_CMD_LOGDELIMITER | \|\|\| | Log delimiter for output. |
+| SQ\_CMD_LINEEND | \\n | Line ending for parsing output |
+| SQ\_CMD_WORKSPACEPENDING | git diff --name-only | Command for checking if the workspace is clean. |
+| SQ\_CMD_PUSH | git push origin master --tags | Command for pushing back to upstream branch. |
+| SQ\_COMMIT_MESSAGE | Updated to version %s for release. | Default message for commits |
+| SQ\_DEFAULT_VERSION | 1.0.0 | Initial version when no previous tags found on repo. |
+| SQ\_OPT_CHECKCLEAN | true | Check if the workspace is clean. Set to 0/false to allow dirty workspaces. |
+| SQ\_OPT_APPLYVERSION | true | Apply the versioning command to the package type. Set to 0/false to skip the version bump command |
+| SQ\_OPT_PUSH | true | Push to upstream repository after success? |
+
+## Contributing
+Feature suggestions and improvements welcome. Early days.

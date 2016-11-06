@@ -1,0 +1,17 @@
+{
+    "semantique": {
+        "commands": {
+            "fetchTags": "SQ_CMD_FETCH",
+            "log": "SQ_CMD_LOGS",
+            "logDelimiter": "SQ_CMD_LOGDELIMTER",
+            "outputTerminator": "SQ_CMD_LINEEND",
+            "pending": "SQ_CMD_WORKSPACEPENDING",
+            "push": "SQ_CMD_PUSH"
+        },
+        "defaultVersion": "SQ_DEFAULT_VERSION",
+        "commitMessage": "SQ_COMMIT_MESSAGE",
+        "requireCleanWorkspace": "SQ_OPT_CHECKCLEAN",
+        "applyNpmVersion": "SQ_OPT_APPLYVERSION",
+        "pushUpstream": "SQ_OPT_PUSH"
+    }
+}
