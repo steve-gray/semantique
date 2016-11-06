@@ -2,6 +2,7 @@ FROM        node:7
 MAINTAINER  steve@eventualconsistency.net
 
 WORKDIR     /plugin
+ENV         NODE_CONFIG_DIR=/plugin/config
 
 ADD         node_modules    /plugin/node_modules
 ADD         lib             /plugin/lib/
