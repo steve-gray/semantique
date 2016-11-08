@@ -19,6 +19,11 @@ describe('Helpers', () => {
         .to.deep.eql(['1.0.0']);
     });
 
+    it('Should return empty array for empty string', () => {
+      expect(helpers.getDecorationTags(''))
+        .to.deep.eql([]);
+    });
+
     it('Should return expected tag text (ignore brackets)', () => {
       expect(helpers.getDecorationTags('(tag: foo, tag: v1.0.0, tag: foo)'))
         .to.deep.eql(['1.0.0']);
