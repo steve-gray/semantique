@@ -59,7 +59,7 @@ be used with your pipeline such as:
 It is assumed that the upstream origin URL is already set on your git workspace for the purposes of publishing. You need to set the following environment variables (as secrets in Drone/GoCD):
 
 | Environment Variable | Used For |
-| - | - |
+|----------------------|----------|
 | GIT_USER | Username for publishing changes back to the upstream Git repository. |
 | GIT_PASS | Password or personal access token (recommended) for publishing changes back to upstream. |
 
