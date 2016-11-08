@@ -3,9 +3,9 @@
 Semantic versioning based purely on current Git workspace without dependencies on
 package registries or CI systems (though you can integrate one if you want).
 
-| Current Version | Latest Build | Dependencies | Dev Dependencies |
-| --------------- | ------------ | ----------- | ---------------- |
-| [![npm version](https://badge.fury.io/js/semantique.svg)](https://badge.fury.io/js/semantique) | [![Build Status](http://drone.eventualconsistency.net/api/badges/steve-gray/semantique/status.svg)](http://drone.eventualconsistency.net/steve-gray/semantique) | [![Prod Dependencies](https://david-dm.org/steve-gray/semantique/status.svg)](https://david-dm.org/steve-gray/semantique) | [![Dev Dependencies](https://david-dm.org/steve-gray/semantique/dev-status.svg)](https://david-dm.org/steve-gray/semantique#info=devDependencies) |
+| Current Version | Latest Build | Dependencies | Dev Dependencies | NPM | Docker | 
+| --------------- | ------------ | ------------ | ---------------- | --- | ------ |
+| [![npm version](https://badge.fury.io/js/semantique.svg)](https://badge.fury.io/js/semantique) | [![Build Status](http://drone.eventualconsistency.net/api/badges/steve-gray/semantique/status.svg)](http://drone.eventualconsistency.net/steve-gray/semantique) | [![Prod Dependencies](https://david-dm.org/steve-gray/semantique/status.svg)](https://david-dm.org/steve-gray/semantique) | [![Dev Dependencies](https://david-dm.org/steve-gray/semantique/dev-status.svg)](https://david-dm.org/steve-gray/semantique#info=devDependencies) | ![NPM Downloads](https://img.shields.io/npm/dm/semantique.svg) | ![Docker Pulls](https://img.shields.io/docker/pulls/eventualconsistency/semantique.svg)
 
 
 ## How It Works
