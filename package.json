@@ -6,7 +6,7 @@
   "bin": "./lib",
   "scripts": {
     "start": "node lib",
-    "test": "ls"
+    "test": "./node_modules/.bin/nyc ./node_modules/.bin/gulp"
   },
   "repository": {
     "type": "git",
@@ -32,5 +32,39 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.9.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.6.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-mocha": "^3.0.1",
+    "mocha": "^3.1.2",
+    "nyc": "^8.4.0"
+  },
+  "eslintConfig": {
+    "extends": "airbnb"
+  },
+  "nyc": {
+    "lines": 0,
+    "statements": 0,
+    "functions": 0,
+    "branches": 0,
+    "include": [
+      "lib/**/*.js"
+    ],
+    "reporter": [
+      "lcov",
+      "text",
+      "text-summary"
+    ],
+    "all": true,
+    "sourceMap": true,
+    "instrument": true,
+    "check-coverage": true
   }
 }
