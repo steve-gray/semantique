@@ -1,7 +1,7 @@
 pipeline:
     # Preamble to make sure project is ready.
     install_npm_packages:
-        image: node:4
+        image: node:7
         environment:
             - NPM_CONFIG_LOGLEVEL=warn
         commands:
